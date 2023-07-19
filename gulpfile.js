@@ -1,5 +1,6 @@
 const { src, dest, watch } = require("gulp"); //? 
 const sass = require("gulp-sass")(require("sass"));
+const plumber = require('gulp-plumber');
 
 function css(done){
     //* Identify sass file
@@ -9,6 +10,7 @@ function css(done){
     //* save css file
 
     src("src/scss/**/*.scss")
+        .pipe(plumber())
         .pipe(sass())
         .pipe(dest("build/css"));
 
