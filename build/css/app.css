@@ -369,7 +369,7 @@ h3 {
 @media (min-width: 768px) {
   .header .content-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 .header a {
@@ -394,4 +394,47 @@ h3 {
 .main-nav a:hover {
   color: #000;
   background-color: #FEF46D;
+}
+
+.video {
+  position: relative;
+  max-height: 60rem;
+  min-height: 40rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(270deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 0%, rgba(183, 7, 234, 0.5551032913) 0%, rgba(255, 0, 206, 0.1) 100%);
+  display: flex;
+  align-items: center;
+}
+.video video {
+  width: auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.content-video {
+  z-index: 1;
+}
+.content-video h2 {
+  color: #FFF;
+  font-size: 6rem;
+  margin: 0;
+}
+.content-video p {
+  background-color: red;
+  color: #FFF;
+  display: inline-block;
+  border-radius: 0.1rem;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  font-size: 2.4rem;
 }
