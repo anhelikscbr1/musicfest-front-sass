@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about-fest{
+    padding: 3rem 0; 
+    @include m.tablet{
+        @include m.grid(2, 5rem);
+    }
+}
+
+.content-fest{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h2{
+        padding-top: 4rem;
+        margin-bottom: 2rem;
+        @include m.tablet{
+           padding-top: 0; 
+        }
+    }
+
+    .date{
+        color: v.$pink;
+        font-weight: 700;
+    }
+    p{
+        text-align: justify;
+    }
+}
