@@ -1,0 +1,15 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galery{
+    padding: 5rem 0;
+    text-align: center;
+
+    .galery-img{
+        height: auto;
+        display: flex ;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+}

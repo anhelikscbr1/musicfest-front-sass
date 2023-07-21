@@ -552,3 +552,15 @@ img {
 .bg-green li:nth-child(odd) {
   background-color: rgba(8, 113, 108, 0.8470588235);
 }
+
+.galery {
+  padding: 5rem 0;
+  text-align: center;
+}
+.galery .galery-img {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
