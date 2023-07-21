@@ -23,5 +23,38 @@ function loadGalery(){
 }
 
 function showImage(id){
-    console.log(id);
+    const image = document.createElement('picture');
+    image.innerHTML = `
+        <source srcset="build/img/grande/${id}.avif" type="image/avif">
+        <source srcset="build/img/grande/${id}.webp" type="image/webp">
+        <img loading="lazy" width="200" height="300" src="build/img/grande/${id}.jpg" alt="image">
+    `;
+
+    //? Create the overlay to display the image
+    const overlay = document.createElement('DIV');
+    overlay.appendChild(image);
+    overlay.classList.add('overlay');
+    overlay.onclick = function(){
+        const body = document.querySelector('body');
+        body.classList.remove('fix-body');
+        overlay.remove();
+    }
+
+    //? create a btn to close the modal
+    const closeModal= document.createElement('P');
+    closeModal.textContent = "X";
+    closeModal.classList.add('btn-close');
+    closeModal.onclick = function(){
+        const body = document.querySelector('body');
+        body.classList.remove('fix-body');
+        overlay.remove();
+    };
+
+    overlay.appendChild(closeModal);
+
+    //? append the overlay to the body
+    const body = document.querySelector('body');
+    body.appendChild(overlay);
+    body.classList.add('fix-body');
+
 }
