@@ -598,3 +598,55 @@ img {
 .btn-close:hover {
   cursor: pointer;
 }
+
+.tickets {
+  background-color: rgba(11, 161, 154, 0.8470588235);
+  padding: 5rem;
+}
+.tickets h3 {
+  text-align: center;
+  color: #FFF;
+}
+
+@media (min-width: 768px) {
+  .content-tickets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.ticket {
+  margin-bottom: 5rem;
+}
+.ticket .ticket-header {
+  background-color: #F53756;
+  text-align: center;
+}
+.ticket .ticket-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0rem;
+}
+.ticket .ticket-body li {
+  background-color: white;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid gray;
+}
+.ticket .ticket-footer {
+  margin: 0;
+  background-color: #752F97;
+  text-align: center;
+}
+.ticket .ticket-name {
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ticket p {
+  padding: 1rem 0;
+  color: #FFF;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
