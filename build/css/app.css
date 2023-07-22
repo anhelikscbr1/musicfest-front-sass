@@ -650,3 +650,12 @@ img {
   text-align: center;
   margin: 0;
 }
+
+.footer p {
+  margin: 0;
+  background-color: #F53756;
+  padding: 1rem 0;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+}
